@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Salmonid Simulator!!</title>
+  <style>
+    #eweh {
+      width: 20%;
+      height: 20%;
+    }
+
+    #owo {
+      width: 40%;
+      height: 40%;
+    }
+  </style>
+
+
+</head>
+
+
+<body>
+  <img id="eweh" src="https://tse3.mm.bing.net/th/id/OIP.ks2Oih4M4uGAWkQ5CVjmeAAAAA?pid=ImgDet&rs=1">
+
+  <img id="owo" src="https://i.ytimg.com/vi/ezlq--QeC5o/maxresdefault.jpg">
+
+  <p id="oweh"> eggs:0 </p>
+
+  <img id="weew"
+    src="https://vignette4.wikia.nocookie.net/splatoon/images/8/86/GoldenEgg.png/revision/latest?cb=20170705185901">
+
+  <p id="demo"></p>
+</body>
+
+</html>
+
+
+<script>
+
+  var eggs = 0
+
+  var ppc = 1
+
+  var eggAmt = 25
+
+  var eggAmtTwo = 40
+
+  document.getElementById("eweh").addEventListener("click", increaseEggs)
+
+  document.getElementById("owo").addEventListener("click", doubleEggs)
+
+  document.getElementById("weew").addEventListener("click", autoClick)
+
+  function increaseEggs() {
+    eggs = eggs + ppc
+    document.getElementById("oweh").innerText = eggs
+    console.log(eggs)
+  }
+
+
+  function doubleEggs() {
+    if (eggs >= 25) {
+      eggs = eggs - eggAmt;
+      ppc = ppc + 1;
+    }
+  }
+  function tripleEggs() {
+    if (eggs >= 40) {
+      eggs = eggs - eggAmtTwo;
+      ppc = ppc + 1;
+    }
+  }
+  function autoClick(){
+    if (eggs >= 40)
+    eggs = eggs - eggAmt;
+    setInterval(increaseEggs, 100);
+  }
+</script>
